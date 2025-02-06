@@ -1,4 +1,4 @@
-package com.example
+package com.example.utils
 
 class MathHelper private constructor() {
 

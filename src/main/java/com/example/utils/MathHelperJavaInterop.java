@@ -1,4 +1,4 @@
-package com.example;
+package com.example.utils;
 
 public class MathHelperJavaInterop {
     public static void main(String[] args) {
