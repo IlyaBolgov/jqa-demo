@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+    implementation 'ch.qos.logback:logback-classic:1.5.16'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
     testImplementation "org.jetbrains.kotlin:kotlin-test"
 }
