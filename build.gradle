@@ -25,6 +25,12 @@ dependencies {
     // Kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
+    // Kotlin Coroutines Core
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+
+    // Coroutines testing dependency
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4"
+
     // Database
     implementation 'com.h2database:h2'
 

@@ -1,36 +1,35 @@
 package com.example
 
+
 import com.example.utils.MathHelper
 import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 class MathHelperTest {
 
-    private val mathHelper = MathHelper()
-
     @Test
     fun exponentTest() {
-        assertEquals(1.0, mathHelper.exponent(2.0, 0))
-        assertEquals(4.0, mathHelper.exponent(2.0, 2))
+        assertEquals(1.0, MathHelper.exponent(2.0, 0))
+        assertEquals(4.0, MathHelper.exponent(2.0, 2))
     }
 
     @Test
     fun factorialTest() {
-        assertEquals(1, mathHelper.factorial(0))
-        assertEquals(6, mathHelper.factorial(3))
+        assertEquals(1, MathHelper.factorial(0))
+        assertEquals(6, MathHelper.factorial(3))
     }
 
     @Test
     fun factorialNegativeTest() {
-        val exception = assertThrows(IllegalArgumentException::class.java) {
-            mathHelper.factorial(-1)
+        val exception = assertThrows<IllegalArgumentException> {
+            MathHelper.factorial(-1)
         }
         assertEquals("Factorial is not defined for negative numbers: n = -1", exception.message)
     }
 
     @Test
     fun exponentNegativeTest() {
-        assertEquals(0.125, mathHelper.exponent(2.0, -3), 0.0001)
+        assertEquals(0.125, MathHelper.exponent(2.0, -3), 0.0001)
     }
 }
