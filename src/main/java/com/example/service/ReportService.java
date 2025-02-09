@@ -5,8 +5,11 @@ import com.example.persist.AccountRepository;
 import com.example.persist.ReportSaver;
 import com.example.utils.NumberedDecorator;
 import com.example.utils.StringDecorator;
+import org.springframework.stereotype.Service;
+
 import java.util.Collection;
 
+@Service
 public class ReportService {
     private final AccountRepository accountRepository;
     private final NumberedDecorator numberedDecorator;
