@@ -6,8 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class AsyncProcessor {
-
-    private static final ExecutorService executor = Executors.newFixedThreadPool(4);
+    private static final int THREAD_POOL_SIZE = 4;
+    private static ExecutorService executor = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
 
     public static CompletableFuture<Integer> computeAsync(int number) {
         return CompletableFuture.supplyAsync(() -> {
@@ -33,6 +33,12 @@ public class AsyncProcessor {
             }
         } catch (InterruptedException e) {
             executor.shutdownNow();
+        }
+    }
+
+    public static void restartExecutor() {
+        if (executor.isShutdown() || executor.isTerminated()) {
+            executor = Executors.newFixedThreadPool(THREAD_POOL_SIZE);
         }
     }
 }
