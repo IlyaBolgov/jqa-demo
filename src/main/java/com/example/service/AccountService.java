@@ -4,13 +4,15 @@ import com.example.domain.Account;
 import com.example.domain.DepositAccount;
 import com.example.exception.NotEnoughSpaceException;
 import com.example.persist.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
 
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
+    @Autowired
     public AccountService(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }

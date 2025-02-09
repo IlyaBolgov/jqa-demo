@@ -5,6 +5,7 @@ import com.example.persist.AccountRepository;
 import com.example.persist.ReportSaver;
 import com.example.utils.NumberedDecorator;
 import com.example.utils.StringDecorator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -16,6 +17,7 @@ public class ReportService {
     private final StringDecorator stringDecorator;
     private ReportSaver saver;
 
+    @Autowired
     public ReportService(AccountRepository accountRepository, NumberedDecorator numberedDecorator, StringDecorator stringDecorator) {
         this.accountRepository = accountRepository;
         this.numberedDecorator = numberedDecorator;
