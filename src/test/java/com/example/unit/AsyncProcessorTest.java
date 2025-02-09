@@ -1,4 +1,4 @@
-package com.example;
+package com.example.unit;
 
 import com.example.async.AsyncProcessor;
 import org.junit.jupiter.api.Test;
